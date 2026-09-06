@@ -1,0 +1,171 @@
+/* ========================================
+   NAVBAR
+======================================== */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  width: 100%;
+
+  background: rgba(7, 31, 67, 0.97);
+
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(255, 204, 0, 0.2);
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+}
+
+
+/* Navbar container */
+
+.nav-container {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 14px 25px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+
+/* Website logo */
+
+.logo {
+  color:  #f59e0b;
+
+  font-size: 1.1rem;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  white-space: nowrap;
+}
+
+.logo span {
+  color: white;
+}
+
+
+/* Navigation links */
+
+.nav-links {
+  list-style: none;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 5px;
+
+  margin: 0;
+
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0;
+
+  padding: 0;
+}
+
+
+/* Individual links */
+
+.nav-links a {
+  display: block;
+
+  padding: 9px 12px;
+
+  color: white;
+
+  font-size: 0.9rem;
+
+  font-weight: bold;
+
+  border-radius: 6px;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+/* Hover effect */
+
+.nav-links a:hover {
+  color: #ffcc00;
+
+  background: rgba(20, 84, 194, 0.5);
+
+  transform: translateY(-2px);
+}
+
+
+/* ========================================
+   TABLET NAVBAR
+======================================== */
+
+@media (max-width: 900px) {
+
+  .nav-container {
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+
+    justify-content: center;
+  }
+}
+
+
+/* ========================================
+   MOBILE NAVBAR
+======================================== */
+
+@media (max-width: 600px) {
+
+  .nav-container {
+    padding: 12px 10px;
+  }
+
+  .logo {
+    font-size: 0.9rem;
+
+    letter-spacing: 1px;
+  }
+
+  .nav-links {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 4px;
+  }
+
+  .nav-links a {
+    padding: 8px 4px;
+
+    text-align: center;
+
+    font-size: 0.72rem;
+  }
+}

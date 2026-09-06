@@ -1,0 +1,430 @@
+/* =========================================
+ABOUT PAGE
+========================================= */
+
+.about-page {
+min-height: 100vh;
+background:
+radial-gradient(
+circle at top,
+rgba(27, 58, 105, 0.35),
+transparent 35%
+),
+#071326;
+color: #edf3ff;
+overflow-x: hidden;
+}
+
+/* =========================================
+JURASSIC ARCHIVE HERO
+========================================= */
+
+.about-hero {
+position: relative;
+padding: 4.5rem 1.5rem 3.5rem;
+text-align: center;
+border-bottom: 1px solid rgba(255, 183, 77, 0.16);
+background:
+linear-gradient(
+180deg,
+rgba(15, 45, 87, 0.85),
+rgba(7, 19, 38, 0.9)
+);
+}
+
+.jurassic-archive-logo {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 1rem;
+margin-bottom: 1rem;
+}
+
+.archive-title {
+color: #ffb74d;
+font-size: clamp(1.3rem, 3vw, 2rem);
+font-weight: 800;
+letter-spacing: 0.3em;
+white-space: nowrap;
+}
+
+.archive-line {
+width: clamp(35px, 8vw, 100px);
+height: 1px;
+background: linear-gradient(
+90deg,
+transparent,
+#ffb74d
+);
+}
+
+.archive-line:last-child {
+background: linear-gradient(
+90deg,
+#ffb74d,
+transparent
+);
+}
+
+.archive-subtitle {
+max-width: 650px;
+margin: 0 auto;
+color: #9eabc2;
+font-size: 1rem;
+}
+
+/* =========================================
+MAIN CONTAINER
+========================================= */
+
+.about-container {
+width: min(1120px, calc(100% - 2rem));
+margin: 0 auto;
+padding: 4rem 0 5rem;
+}
+
+/* =========================================
+INTRO
+========================================= */
+
+.about-intro {
+max-width: 850px;
+margin: 0 auto 4rem;
+text-align: center;
+}
+
+.section-label {
+display: inline-block;
+margin-bottom: 0.9rem;
+color: #ffb74d;
+font-size: 0.72rem;
+font-weight: 800;
+letter-spacing: 0.18em;
+}
+
+.about-intro h1 {
+margin: 0;
+color: #f7f9fc;
+font-size: clamp(2rem, 5vw, 4rem);
+line-height: 1.1;
+letter-spacing: -0.04em;
+}
+
+.about-intro h1 span {
+color: #ffb74d;
+}
+
+.intro-text {
+max-width: 680px;
+margin: 1.25rem auto 0;
+color: #9eabc2;
+font-size: 1.05rem;
+}
+
+/* =========================================
+OVERVIEW LIST
+========================================= */
+
+.about-list {
+margin: 0;
+padding: 0;
+overflow: hidden;
+border: 1px solid rgba(116, 145, 191, 0.18);
+border-radius: 20px;
+background: rgba(14, 29, 55, 0.72);
+box-shadow:
+0 20px 60px rgba(0, 0, 0, 0.22);
+}
+
+.about-list-item {
+display: grid;
+grid-template-columns: minmax(190px, 0.65fr) 2fr;
+border-bottom: 1px solid rgba(116, 145, 191, 0.14);
+}
+
+.about-list-item:last-child {
+border-bottom: none;
+}
+
+.about-list dt {
+display: flex;
+align-items: center;
+padding: 1.75rem;
+color: #ffb74d;
+background: rgba(8, 20, 40, 0.55);
+font-size: 1.05rem;
+font-weight: 700;
+}
+
+.about-list dd {
+margin: 0;
+padding: 1.75rem;
+color: #b5c0d3;
+line-height: 1.8;
+}
+
+.about-list strong {
+color: #edf3ff;
+font-weight: 650;
+}
+
+/* =========================================
+SECTION HEADINGS
+========================================= */
+
+.section-heading {
+margin-bottom: 1.8rem;
+}
+
+.section-heading h2 {
+margin: 0;
+color: #f5f7fb;
+font-size: clamp(1.7rem, 4vw, 2.5rem);
+letter-spacing: -0.03em;
+}
+
+/* =========================================
+INFORMATION CARDS
+========================================= */
+
+.about-cards-section {
+margin-top: 5rem;
+}
+
+.about-info-grid {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 1.25rem;
+}
+
+.about-info-card {
+position: relative;
+padding: 1.75rem;
+overflow: hidden;
+border: 1px solid rgba(116, 145, 191, 0.18);
+border-radius: 18px;
+background:
+linear-gradient(
+145deg,
+rgba(21, 43, 78, 0.9),
+rgba(10, 23, 45, 0.9)
+);
+transition:
+transform 0.25s ease,
+border-color 0.25s ease,
+box-shadow 0.25s ease;
+}
+
+.about-info-card::before {
+position: absolute;
+top: 0;
+left: 0;
+width: 4px;
+height: 100%;
+background: #ffb74d;
+content: "";
+opacity: 0;
+transition: opacity 0.25s ease;
+}
+
+.about-info-card:hover {
+transform: translateY(-5px);
+border-color: rgba(255, 183, 77, 0.45);
+box-shadow:
+0 16px 40px rgba(0, 0, 0, 0.28);
+}
+
+.about-info-card:hover::before {
+opacity: 1;
+}
+
+.card-icon {
+display: grid;
+width: 48px;
+height: 48px;
+margin-bottom: 1.2rem;
+place-items: center;
+border: 1px solid rgba(255, 183, 77, 0.22);
+border-radius: 14px;
+background: rgba(255, 183, 77, 0.08);
+font-size: 1.4rem;
+}
+
+.about-info-card h3 {
+margin: 0 0 0.7rem;
+color: #f5f7fb;
+font-size: 1.2rem;
+}
+
+.about-info-card p {
+margin: 0;
+color: #9eabc2;
+line-height: 1.7;
+}
+
+/* =========================================
+DETAILS / ACCORDION
+========================================= */
+
+.about-details-section {
+margin-top: 5rem;
+}
+
+.about-details {
+display: grid;
+gap: 1rem;
+}
+
+.about-details details {
+overflow: hidden;
+border: 1px solid rgba(116, 145, 191, 0.18);
+border-radius: 16px;
+background: rgba(13, 28, 53, 0.78);
+transition:
+border-color 0.25s ease,
+background 0.25s ease;
+}
+
+.about-details details:hover,
+.about-details details[open] {
+border-color: rgba(255, 183, 77, 0.35);
+background: rgba(18, 38, 69, 0.9);
+}
+
+.about-details summary {
+display: flex;
+align-items: center;
+gap: 0.8rem;
+padding: 1.25rem 1.5rem;
+color: #edf3ff;
+cursor: pointer;
+font-weight: 700;
+list-style: none;
+}
+
+.about-details summary::-webkit-details-marker {
+display: none;
+}
+
+.about-details summary::after {
+margin-left: auto;
+color: #ffb74d;
+content: "+";
+font-size: 1.4rem;
+font-weight: 400;
+transition: transform 0.2s ease;
+}
+
+.about-details details[open] summary::after {
+transform: rotate(45deg);
+}
+
+.about-details details p {
+margin: 0;
+padding: 0 1.5rem 1.5rem;
+color: #aab6ca;
+line-height: 1.8;
+}
+
+/* =========================================
+FOOTER
+========================================= */
+
+.about-footer {
+padding: 2rem 1rem;
+border-top: 1px solid rgba(116, 145, 191, 0.14);
+color: #7f8ca3;
+text-align: center;
+}
+
+.about-footer p {
+margin: 0;
+font-size: 0.9rem;
+}
+
+.about-footer strong {
+color: #ffb74d;
+}
+
+.footer-divider {
+margin: 0 0.6rem;
+color: #52617a;
+}
+
+.footer-dino {
+margin-left: 0.35rem;
+}
+
+/* =========================================
+RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 760px) {
+.about-hero {
+padding: 3.5rem 1rem 3rem;
+}
+
+.jurassic-archive-logo {
+gap: 0.65rem;
+}
+
+.archive-title {
+font-size: 1rem;
+letter-spacing: 0.18em;
+}
+
+.about-container {
+width: min(100% - 1.25rem, 1120px);
+padding-top: 3rem;
+}
+
+.about-list-item {
+grid-template-columns: 1fr;
+}
+
+.about-list dt {
+padding: 1.2rem 1.3rem;
+border-bottom: 1px solid rgba(116, 145, 191, 0.14);
+}
+
+.about-list dd {
+padding: 1.3rem;
+}
+
+.about-info-grid {
+grid-template-columns: 1fr;
+}
+
+.about-cards-section,
+.about-details-section {
+margin-top: 3.5rem;
+}
+}
+
+@media (max-width: 480px) {
+.archive-line {
+width: 25px;
+}
+
+.archive-title {
+font-size: 0.85rem;
+letter-spacing: 0.12em;
+}
+
+.about-intro h1 {
+font-size: 2rem;
+}
+
+.about-info-card {
+padding: 1.4rem;
+}
+
+.about-details summary {
+padding: 1.1rem;
+font-size: 0.95rem;
+}
+
+.about-details details p {
+padding: 0 1.1rem 1.2rem;
+}
+}
